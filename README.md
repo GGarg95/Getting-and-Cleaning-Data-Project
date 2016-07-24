@@ -35,7 +35,7 @@ We convert the activity variable into factor and name them according to the info
 
 We use the reshape2 package to melt the data and cast it into a tidy format as per the requirement.  In melt the id variables will be “subject” and “activity”. Using melt() we melt the data which can be then transformed using dcast(). The dcast() then casts the data into a format where for each subject and for each of his activities, mean is calculated for different types of measurement.
 
-Here each column [i.e 3:68] is independent since each has unique type of measurements. Hence we get a data that is tidy. We then write this tidy data into a “.csv” file using write.csv.
+Here each column [i.e 3:68] is independent since each has unique type of measurements. Hence we get a data that is tidy. We then write this tidy data into a “.txt” file using write.table.
  
       
 
