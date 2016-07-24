@@ -1,5 +1,5 @@
 # Set the working directory to where the UCI HAR Dataset is
-setwd("C:/Statistics/Rcoursera/Getting and Cleaning Data/UCI HAR Dataset/")
+# for eg: setwd("C:/Statistics/Rcoursera/Getting and Cleaning Data/UCI HAR Dataset/")
 
 features <- read.table("./features.txt")
 colnames(features) <- c("id_no","variable_names")
@@ -61,10 +61,10 @@ library(reshape2)
 molten <- melt(req_data, id= c("subject","activity"))
 dcast_data <-  dcast(molten, subject + activity ~ variable, mean)
 
-# Write the dcast_data into a .csv file called tidy_data
-write.csv(dcast_data,"./tidy_data.csv",row.names =  FALSE)
+# Write the dcast_data into a .txt file called tidy_data
+write.table(dcast_data,"./tidy_data.txt",row.names =  FALSE)
 ## for reading the file back into R use
-## read.csv("./tidy_data.csv", header = TRUE)
+## read.txt("./tidy_data.txt", header = TRUE)
 
 
 
