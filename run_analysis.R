@@ -63,8 +63,9 @@ dcast_data <-  dcast(molten, subject + activity ~ variable, mean)
 
 # Write the dcast_data into a .txt file called tidy_data
 write.table(dcast_data,"./tidy_data.txt",row.names =  FALSE)
-## for reading the file back into R use
-## read.txt("./tidy_data.txt", header = TRUE)
+## for reading the file back into R use and viewing it use
+##  tidy_data <- read.table("./tidy_data.txt", header = TRUE)
+## View(tidy_data)
 
 
 
